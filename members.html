@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Directory - Western Extension Committee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wheat: #d4a574;
+            --earth-brown: #8b6f47;
+            --deep-green: #3d5a3d;
+            --cream: #faf8f3;
+            --charcoal: #2c2c2c;
+            --light-gray: #e8e6e0;
+            --accent-rust: #b85c38;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--charcoal);
+            background: var(--cream);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--earth-brown) 100%);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 0 2rem;
+        }
+
+        .back-link a {
+            color: var(--deep-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            color: var(--accent-rust);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .members-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .state-header {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            color: var(--deep-green);
+            font-size: 1.3rem;
+            padding: 1.5rem 0 0.8rem;
+            border-bottom: 2px solid var(--wheat);
+            margin-top: 2rem;
+        }
+
+        .state-header:first-child {
+            margin-top: 0;
+        }
+
+        .member-row {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: grid;
+            grid-template-columns: 220px 150px 1fr 300px;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .member-row:last-child {
+            border-bottom: none;
+        }
+
+        .member-name {
+            font-weight: 600;
+            color: var(--deep-green);
+        }
+
+        .member-state {
+            color: var(--earth-brown);
+            font-size: 0.95rem;
+        }
+
+        .member-institution {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .member-contact {
+            text-align: right;
+        }
+
+        .member-contact .phone {
+            display: block;
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .member-contact .email {
+            color: var(--accent-rust);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .member-contact .email:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--wheat);
+            text-decoration: none;
+        }
+
+        @media (max-width: 968px) {
+            .member-row {
+                grid-template-columns: 200px 1fr 280px;
+            }
+            .member-state {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .member-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                padding: 1.5rem 0;
+            }
+
+            .member-contact {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Member Directory</h1>
+        <p>Western Extension Committee State Representatives</p>
+    </header>
+
+    <div class="back-link">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <main>
+        <div class="members-container">
+            <!-- ARIZONA -->
+            <div class="state-header">Arizona</div>
+            <div class="member-row">
+                <div class="member-name">Trent Teegerstrom</div>
+                <div class="member-state">Arizona</div>
+                <div class="member-institution">University of Arizona</div>
+                <div class="member-contact">
+                    <span class="phone">520-621-6245</span>
+                    <a href="mailto:tteegers@ag.arizona.edu" class="email">tteegers@ag.arizona.edu</a>
+                </div>
+            </div>
+            <div class="member-row">
+                <div class="member-name">Russell Tronstad</div>
+                <div class="member-state">Arizona</div>
+                <div class="member-institution">University of Arizona</div>
+                <div class="member-contact">
+                    <span class="phone">520-621-2425</span>
+                    <a href="mailto:tronstad@ag.arizona.edu" class="email">tronstad@ag.arizona.edu</a>
+                </div>
+            </div>
+            <div class="member-row">
+                <div class="member-name">Jose Quintero</div>
+                <div class="member-state">Arizona</div>
+                <div class="member-institution">University of Arizona</div>
+                <div class="member-contact">
+                    <span class="phone">520-621-6241</span>
+                    <a href="mailto:josehquintero@arizona.edu" class="email">josehquintero@arizona.edu</a>
+                </div>
+            </div>
+
+            <!-- TO ADD MORE STATES: Copy from here -->
+            <div class="state-header">California</div>
+            <div class="member-row">
+                <div class="member-name">Jan Gonzales</div>
+                <div class="member-state">California</div>
+                <div class="member-institution">UC Agriculture & Natural Resources</div>
+                <div class="member-contact">
+                    <span class="phone">619-985-9422</span>
+                    <a href="mailto:jggonzales@ucanr.edu" class="email">jggonzales@ucanr.edu</a>
+                </div>
+            </div>
+            <!-- ADD MORE MEMBERS HERE following the pattern above -->
+            
+            <!-- Template for adding a new member:
+            <div class="member-row">
+                <div class="member-name">NAME HERE</div>
+                <div class="member-state">STATE</div>
+                <div class="member-institution">INSTITUTION</div>
+                <div class="member-contact">
+                    <span class="phone">PHONE</span>
+                    <a href="mailto:EMAIL" class="email">EMAIL</a>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Western Extension Committee</strong></p>
+        <p><a href="index.html">Return to Home</a></p>
+    </footer>
+</body>
+</html>
