@@ -1,73 +1,70 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Western Extension Committee</title>
-    <link href="index_files/css2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --wheat: #d4a574;
-            --earth-brown: #8b6f47;
-            --deep-green: #3d5a3d;
-            --cream: #faf8f3;
-            --charcoal: #2c2c2c;
-            --light-gray: #e8e6e0;
-            --accent-rust: #b85c38;
+            --parchment: #f5f0e8;
+            --warm-white: #faf7f2;
+            --ink: #2b2520;
+            --field-green: #4a6741;
+            --dark-green: #344a2e;
+            --soil: #6b5b4a;
+            --wheat: #c8a96e;
+            --rust: #9e5a3c;
+            --rule: #d1c7b7;
+            --text-secondary: #6b6560;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
             line-height: 1.7;
-            color: var(--charcoal);
-            background: var(--cream);
+            color: var(--ink);
+            background: var(--parchment);
         }
 
+        /* ---- HEADER ---- */
         header {
-            background: linear-gradient(135deg, var(--deep-green) 0%, var(--earth-brown) 100%);
-            color: var(--cream);
-            padding: 3rem 2rem;
+            background: var(--warm-white);
+            border-bottom: 3px solid var(--field-green);
+            padding: 2.5rem 2rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 50 Q 25 25, 50 50 T 100 50" stroke="rgba(255,255,255,0.05)" fill="none" stroke-width="2"/></svg>') repeat;
-            opacity: 0.3;
+        header .overline {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--rust);
+            margin-bottom: 0.5rem;
         }
 
         header h1 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3.5rem;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            position: relative;
-            letter-spacing: -1px;
+            color: var(--dark-green);
+            line-height: 1.2;
+            margin-bottom: 0.4rem;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            position: relative;
-            font-weight: 300;
+        header .subtitle {
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--soil);
         }
 
+        /* ---- NAV ---- */
         nav {
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--dark-green);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -78,256 +75,277 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 0;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-        }
-
-        nav li {
-            margin: 0;
         }
 
         nav a {
             display: block;
-            padding: 1.2rem 2rem;
+            padding: 0.9rem 1.8rem;
             text-decoration: none;
-            color: var(--charcoal);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 3px;
-            background: var(--accent-rust);
-            transition: width 0.3s ease;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
         }
 
         nav a:hover {
-            color: var(--accent-rust);
+            color: var(--wheat);
         }
 
-        nav a:hover::after {
-            width: 60%;
-        }
-
+        /* ---- MAIN ---- */
         main {
-            max-width: 1200px;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
         }
 
         section {
-            margin-bottom: 5rem;
+            margin-bottom: 3.5rem;
         }
 
         h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2.5rem;
-            color: var(--deep-green);
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid var(--wheat);
-            font-weight: 600;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.9rem;
+            color: var(--dark-green);
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .section-rule {
+            width: 60px;
+            height: 3px;
+            background: var(--wheat);
+            margin-bottom: 1.5rem;
         }
 
         h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.8rem;
-            color: var(--earth-brown);
-            margin-bottom: 1rem;
-            font-weight: 600;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.25rem;
+            color: var(--soil);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
         }
 
-        .about-content {
+        p { margin-bottom: 1rem; }
+
+        a { color: var(--rust); }
+        a:hover { color: var(--dark-green); }
+
+        /* ---- ABOUT ---- */
+        .about-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr 240px;
+            gap: 2.5rem;
+            margin-top: 1rem;
         }
 
-        .mission-box {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-left: 5px solid var(--accent-rust);
+        .mission p {
+            color: var(--ink);
+            font-size: 1rem;
         }
 
-        .affiliations {
-            background: var(--light-gray);
-            padding: 2rem;
-            border-radius: 8px;
+        .sidebar-box {
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            padding: 1.5rem;
         }
 
-        .affiliations h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+        .sidebar-box h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--field-green);
         }
 
-        .affiliations a {
+        .sidebar-box a {
             display: block;
-            color: var(--deep-green);
             text-decoration: none;
-            padding: 0.8rem 1rem;
+            color: var(--ink);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--rule);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .sidebar-box a:last-child { border-bottom: none; }
+        .sidebar-box a:hover { color: var(--rust); }
+
+        /* ---- LEADERSHIP ---- */
+        .chair-card {
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--field-green);
+            padding: 1.5rem;
+            max-width: 420px;
+            margin-bottom: 2rem;
+        }
+
+        .chair-card h3 {
+            color: var(--dark-green);
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .chair-card .role {
+            font-size: 0.9rem;
+            color: var(--rust);
+            margin-bottom: 0.1rem;
+        }
+
+        .chair-card .inst {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
             margin-bottom: 0.5rem;
-            background: white;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: 500;
         }
 
-        .affiliations a:hover {
-            background: var(--wheat);
-            transform: translateX(5px);
+        .chair-card .email-link {
+            font-size: 0.9rem;
         }
 
-        .member-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            max-width: 400px;
+        .past-chairs {
+            margin-bottom: 2rem;
         }
 
-        .member-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--deep-green);
+        .past-chairs h3 {
+            margin-bottom: 0.8rem;
         }
 
-        .member-card .title {
-            color: var(--earth-brown);
-            margin-bottom: 0.5rem;
+        .past-chairs-list {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: var(--ink);
+        }
+
+        .directory-cta {
+            background: var(--dark-green);
+            color: white;
+            padding: 1.8rem 2rem;
+            text-align: center;
+        }
+
+        .directory-cta p {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .directory-cta a {
+            color: var(--wheat);
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+            border-bottom: 1px solid var(--wheat);
+            padding-bottom: 2px;
+        }
+
+        .directory-cta a:hover {
+            color: white;
+            border-color: white;
+        }
+
+        /* ---- MEETINGS ---- */
+        .meeting-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--rule);
+            align-items: start;
+        }
+
+        .meeting-item:last-child { border-bottom: none; }
+
+        .meeting-date {
+            text-align: center;
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            padding: 0.6rem 0.4rem;
+        }
+
+        .meeting-date .month {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--rust);
+        }
+
+        .meeting-date .day {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            line-height: 1.2;
+        }
+
+        .meeting-date .year {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .meeting-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .meeting-info .location {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .meeting-info p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* ---- CONTACT ---- */
+        .contact-box {
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            padding: 1.5rem;
             font-size: 0.95rem;
         }
 
-        .member-card .institution {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .member-card .email {
-            color: var(--accent-rust);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .member-card .email:hover {
-            text-decoration: underline;
-        }
-
-        .past-chairs-box {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .past-chairs-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .past-chairs-box p {
-            margin-bottom: 0.8rem;
-            color: var(--charcoal);
-        }
-
-        .member-directory-link {
-            margin-top: 3rem;
-            text-align: center;
-            padding: 2.5rem;
-            background: var(--light-gray);
-            border-radius: 8px;
-        }
-
-        .member-directory-link h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .member-directory-link p {
-            margin: 1rem 0 1.5rem;
-            color: #666;
-        }
-
-        .member-directory-link a {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--deep-green);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-        }
-
-        .member-directory-link a:hover {
-            background: var(--accent-rust);
-        }
-
+        /* ---- FOOTER ---- */
         footer {
-            background: var(--charcoal);
-            color: var(--cream);
-            padding: 3rem 2rem;
+            border-top: 3px solid var(--field-green);
+            background: var(--warm-white);
+            padding: 2rem;
             text-align: center;
-            margin-top: 5rem;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
 
-        footer p {
-            margin-bottom: 0.5rem;
+        footer strong {
+            color: var(--dark-green);
         }
 
         footer a {
-            color: var(--wheat);
+            color: var(--field-green);
             text-decoration: none;
         }
 
-        footer a:hover {
-            color: var(--accent-rust);
-        }
+        footer a:hover { color: var(--rust); }
 
+        /* ---- RESPONSIVE ---- */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav a {
-                padding: 1rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            #meetings div[style*="grid-template-columns: 120px 1fr"] {
-                display: block !important;
-            }
-
-            #meetings div[style*="text-align: center"] {
-                margin-bottom: 1rem;
-            }
+            header h1 { font-size: 2rem; }
+            nav ul { flex-direction: column; text-align: center; }
+            nav a { padding: 0.7rem 1rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .meeting-item { grid-template-columns: 70px 1fr; gap: 1rem; }
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="overline">Est. Western Region</div>
         <h1>Western Extension Committee</h1>
-        <p>Extension Specialists from 13 Western States, Guam, and U.S. Affiliated Pacific Islands</p>
+        <p class="subtitle">Extension Specialists from 13 Western States, Guam &amp; U.S. Affiliated Pacific Islands</p>
     </header>
 
     <nav>
@@ -335,6 +353,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#leadership">Leadership</a></li>
             <li><a href="members.html">Members</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="#meetings">Meetings</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -343,98 +362,85 @@
     <main>
         <section id="about">
             <h2>About Us</h2>
-            <div class="about-content">
-                <div class="mission-box">
-                    <h3>Our Mission</h3>
-                    <p>The Western Extension Committee is an 
-organization of Extension specialists (state, regional, and county) from
- the 13 western states, Guam and U.S. affiliated Pacific Islands, 
-supported by Extension Directors in the western region. WEC also 
-receives support from the Western Extension Risk Management Education 
-Center (Western Center).</p>
-                    <p style="margin-top: 1rem;">The purpose is to share
- concerns and ideas, with the goal of becoming more effective as 
-Extension specialists. Committees and task forces are organized to work 
-together on projects or issues that are common to several or all states.
- The Committee sometimes meets and works with other regional and 
-national Extension committees.</p>
-                    <p style="margin-top: 1rem;">We are loosely 
-affiliated with the Western Agricultural Economics Association and work 
-to strengthen the impact of agricultural economics extension work 
-throughout the western region.</p>
+            <div class="section-rule"></div>
+            <div class="about-grid">
+                <div class="mission">
+                    <p>The Western Extension Committee is an organization of Extension specialists — state, regional, and county — from the 13 western states, Guam and U.S. affiliated Pacific Islands, supported by Extension Directors in the western region. WEC also receives support from the Western Extension Risk Management Education Center (Western Center).</p>
+                    <p>The purpose is to share concerns and ideas, with the goal of becoming more effective as Extension specialists. Committees and task forces are organized to work together on projects or issues that are common to several or all states. The Committee sometimes meets and works with other regional and national Extension committees.</p>
+                    <p>We are loosely affiliated with the Western Agricultural Economics Association and work to strengthen the impact of agricultural economics extension work throughout the western region.</p>
                 </div>
-                <div class="affiliations">
+                <div class="sidebar-box">
                     <h3>Affiliations</h3>
                     <a href="https://waeaonline.org/" target="_blank">Western Agricultural Economics Association</a>
-                    <a href="https://westrme.wsu.edu/" target="_blank">Western Extension Risk Management Education Center</a>
+                    <a href="https://wrme.org/" target="_blank">Western Extension Risk Management Education Center</a>
                 </div>
             </div>
         </section>
 
         <section id="leadership">
             <h2>Committee Leadership</h2>
-            <div class="member-card">
+            <div class="section-rule"></div>
+
+            <div class="chair-card">
                 <h3>Tim Delbridge</h3>
-                <div class="title">Committee Chair (2025-Present)</div>
-                <div class="institution">Oregon State University</div>
-                <a href="mailto:tim.delbridge@oregonstate.edu" class="email">tim.delbridge@oregonstate.edu</a>
+                <div class="role">Committee Chair, 2025–Present</div>
+                <div class="inst">Oregon State University</div>
+                <a href="mailto:tim.delbridge@oregonstate.edu" class="email-link">tim.delbridge@oregonstate.edu</a>
             </div>
 
-            <div class="past-chairs-box">
+            <div class="past-chairs">
                 <h3>Past Committee Chairs</h3>
-                <p><strong>2023-2024:</strong> Dr. Sarah Martinez, University of California, Davis</p>
-                <p><strong>2021-2022:</strong> Dr. Robert Williams, University of Nevada, Reno</p>
-                <p><strong>2019-2020:</strong> Dr. Linda Chang, University of Wyoming</p>
-                <p><strong>2017-2018:</strong> Dr. Thomas Bennett, Utah State University</p>
-                <p><strong>2015-2016:</strong> Dr. Patricia Gomez, New Mexico State University</p>
+                <div class="past-chairs-list">
+                    <strong>2023–2024:</strong> Dr. Sarah Martinez, University of California, Davis<br>
+                    <strong>2021–2022:</strong> Dr. Robert Williams, University of Nevada, Reno<br>
+                    <strong>2019–2020:</strong> Dr. Linda Chang, University of Wyoming<br>
+                    <strong>2017–2018:</strong> Dr. Thomas Bennett, Utah State University<br>
+                    <strong>2015–2016:</strong> Dr. Patricia Gomez, New Mexico State University
+                </div>
             </div>
 
-            <div class="member-directory-link">
-                <h3>State Representatives</h3>
+            <div class="directory-cta">
                 <p>View our complete member directory organized by state</p>
-                <a href="members.html">View Full Member Directory →</a>
+                <a href="members.html">Full Member Directory →</a>
             </div>
         </section>
 
         <section id="meetings">
             <h2>Upcoming Meetings</h2>
-            <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 5px solid var(--accent-rust);">
-                    <div style="display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: center;">
-                        <div style="text-align: center; padding: 1rem; background: var(--light-gray); border-radius: 6px;">
-                            <div style="font-size: 0.9rem; color: var(--earth-brown); text-transform: uppercase; font-weight: 600;">December</div>
-                            <div style="font-size: 2.5rem; font-family: 'Crimson Pro', serif; font-weight: 700; color: var(--deep-green); line-height: 1;">1</div>
-                            <div style="font-size: 0.85rem; color: #666;">2025</div>
-                        </div>
-                        <div>
-                            <h3 style="margin-top: 0; font-size: 1.5rem;">Winter Meeting</h3>
-                            <p style="color: #666; margin-bottom: 0.5rem;">📍 San Diego, California</p>
-                            <p style="color: var(--charcoal); line-height: 1.6;">Annual winter meeting for committee members. Details and registration information to be announced.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-rule"></div>
 
-                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 5px solid var(--wheat);">
-                    <div style="display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: center;">
-                        <div style="text-align: center; padding: 1rem; background: var(--light-gray); border-radius: 6px;">
-                            <div style="font-size: 0.9rem; color: var(--earth-brown); text-transform: uppercase; font-weight: 600;">June</div>
-                            <div style="font-size: 2.5rem; font-family: 'Crimson Pro', serif; font-weight: 700; color: var(--deep-green); line-height: 1;">22-25</div>
-                            <div style="font-size: 0.85rem; color: #666;">2026</div>
-                        </div>
-                        <div>
-                            <h3 style="margin-top: 0; font-size: 1.5rem;">WAEA Annual Conference</h3>
-                            <p style="color: #666; margin-bottom: 0.5rem;">📍 Flagstaff, Arizona</p>
-                            <p style="color: var(--charcoal); line-height: 1.6;">Western Extension Committee session at the Western Agricultural Economics Association Annual Conference.</p>
-                        </div>
-                    </div>
+            <div class="meeting-item">
+                <div class="meeting-date">
+                    <div class="month">Dec</div>
+                    <div class="day">1</div>
+                    <div class="year">2025</div>
+                </div>
+                <div class="meeting-info">
+                    <h3>Winter Meeting</h3>
+                    <div class="location">San Diego, California</div>
+                    <p>Annual winter meeting for committee members. Details and registration information to be announced.</p>
+                </div>
+            </div>
+
+            <div class="meeting-item">
+                <div class="meeting-date">
+                    <div class="month">Jun</div>
+                    <div class="day">22–25</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="meeting-info">
+                    <h3>WAEA Annual Conference</h3>
+                    <div class="location">Flagstaff, Arizona</div>
+                    <p>Western Extension Committee session at the Western Agricultural Economics Association Annual Conference.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <div style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <p>For general inquiries, please contact Committee Chair Tim Delbridge at <a href="mailto:tim.delbridge@oregonstate.edu" style="color: var(--accent-rust); text-decoration: none;">tim.delbridge@oregonstate.edu</a></p>
+            <div class="section-rule"></div>
+            <div class="contact-box">
+                <p style="margin-bottom:0;">For general inquiries, please contact Committee Chair Tim Delbridge at <a href="mailto:tim.delbridge@oregonstate.edu">tim.delbridge@oregonstate.edu</a></p>
             </div>
         </section>
     </main>
@@ -442,25 +448,9 @@ throughout the western region.</p>
     <footer>
         <p><strong>Western Extension Committee</strong></p>
         <p>Extension specialists from the 13 western states, Guam, and U.S. affiliated Pacific Islands</p>
-        <p style="margin-top: 0.5rem;">Affiliated with the Western Agricultural Economics Association</p>
+        <p>Affiliated with the Western Agricultural Economics Association</p>
         <p>Supported by the <a href="https://wrme.org/" target="_blank">Western Extension Risk Management Education Center</a></p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2026 Western Extension Committee. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.7;">© 2026 Western Extension Committee</p>
     </footer>
-
-    <script>
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
-    </script>
-
-
-
-</body></html>
-
+</body>
+</html>

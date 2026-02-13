@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Directory - Western Extension Committee</title>
+    <title>Recent Projects - Western Extension Committee</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -95,68 +95,67 @@
             padding: 3rem 2rem;
         }
 
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.9rem;
+            color: var(--dark-green);
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .section-rule {
+            width: 60px;
+            height: 3px;
+            background: var(--wheat);
+            margin-bottom: 1.5rem;
+        }
+
         a { color: var(--rust); }
         a:hover { color: var(--dark-green); }
 
-        /* ---- DIRECTORY ---- */
-        .directory {
+        .intro {
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---- PROJECT CARDS ---- */
+        .project {
             background: var(--warm-white);
             border: 1px solid var(--rule);
+            border-left: 4px solid var(--field-green);
             padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
         }
 
-        .state-header {
+        .project h3 {
             font-family: 'Libre Baskerville', serif;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--dark-green);
-            font-size: 1.1rem;
-            padding: 1rem 0 0.4rem;
-            border-bottom: 2px solid var(--wheat);
-            margin-top: 1.5rem;
+            margin-bottom: 0.3rem;
         }
 
-        .state-header:first-child {
-            margin-top: 0;
+        .project-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
         }
 
-        .member-row {
-            display: grid;
-            grid-template-columns: 190px 1fr auto;
-            gap: 1rem;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--rule);
-            align-items: baseline;
-            font-size: 0.9rem;
-        }
-
-        .member-row:last-child {
-            border-bottom: none;
-        }
-
-        .member-name {
+        .project-meta .label {
             font-weight: 600;
-            color: var(--ink);
+            color: var(--soil);
         }
 
-        .member-institution {
-            color: var(--text-secondary);
+        .project p {
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
         }
 
-        .member-contact {
-            text-align: right;
-            white-space: nowrap;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        .member-contact a {
-            text-decoration: none;
-            font-size: 0.85rem;
-        }
-
-        .member-contact .sep {
-            margin: 0 0.4rem;
-            color: var(--rule);
+        .project .link {
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         /* ---- FOOTER ---- */
@@ -179,23 +178,15 @@
             header h1 { font-size: 1.8rem; }
             nav ul { flex-direction: column; text-align: center; }
             nav a { padding: 0.7rem 1rem; }
-            .directory { padding: 1rem; }
-            .member-row {
-                grid-template-columns: 1fr;
-                gap: 0.15rem;
-                padding: 0.7rem 0;
-            }
-            .member-contact {
-                text-align: left;
-            }
+            .project { padding: 1.2rem; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="overline">Western Extension Committee</div>
-        <h1>Member Directory</h1>
-        <p class="subtitle">State Representatives</p>
+        <h1>Recent Projects</h1>
+        <p class="subtitle">Highlighting Work by Committee Members</p>
     </header>
 
     <nav>
@@ -210,55 +201,55 @@
     </nav>
 
     <main>
-        <div class="directory">
+        <h2>Recent Projects</h2>
+        <div class="section-rule"></div>
+        <p class="intro">Selected projects from WEC members that extend agricultural economics research to producers and communities across the western region.</p>
 
-            <!-- ARIZONA -->
-            <div class="state-header">Arizona</div>
-            <div class="member-row">
-                <div class="member-name">Trent Teegerstrom</div>
-                <div class="member-institution">University of Arizona</div>
-                <div class="member-contact">
-                    520-621-6245 <span class="sep">|</span> <a href="mailto:tteegers@ag.arizona.edu">tteegers@ag.arizona.edu</a>
-                </div>
+        <!-- PROJECT 1 -->
+        <div class="project">
+            <h3>Western Ranch Economics Decision Tool</h3>
+            <div class="project-meta">
+                <span class="label">Members:</span> Trent Teegerstrom, Russell Tronstad (University of Arizona)<br>
+                <span class="label">Funded by:</span> Western Extension Risk Management Education Center
             </div>
-            <div class="member-row">
-                <div class="member-name">Russell Tronstad</div>
-                <div class="member-institution">University of Arizona</div>
-                <div class="member-contact">
-                    520-621-2425 <span class="sep">|</span> <a href="mailto:tronstad@ag.arizona.edu">tronstad@ag.arizona.edu</a>
-                </div>
-            </div>
-            <div class="member-row">
-                <div class="member-name">Jose Quintero</div>
-                <div class="member-institution">University of Arizona</div>
-                <div class="member-contact">
-                    520-621-6241 <span class="sep">|</span> <a href="mailto:josehquintero@arizona.edu">josehquintero@arizona.edu</a>
-                </div>
-            </div>
-
-            <!-- CALIFORNIA -->
-            <div class="state-header">California</div>
-            <div class="member-row">
-                <div class="member-name">Jan Gonzales</div>
-                <div class="member-institution">UC Agriculture &amp; Natural Resources</div>
-                <div class="member-contact">
-                    619-985-9422 <span class="sep">|</span> <a href="mailto:jggonzales@ucanr.edu">jggonzales@ucanr.edu</a>
-                </div>
-            </div>
-
-            <!-- ADD MORE STATES following the pattern above -->
-            <!--
-            <div class="state-header">STATE NAME</div>
-            <div class="member-row">
-                <div class="member-name">NAME</div>
-                <div class="member-institution">INSTITUTION</div>
-                <div class="member-contact">
-                    PHONE <span class="sep">|</span> <a href="mailto:EMAIL">EMAIL</a>
-                </div>
-            </div>
-            -->
-
+            <p>An interactive budgeting tool designed to help western ranchers evaluate the economic viability of different stocking rates under variable forage conditions. The tool incorporates regional cost data from six western states and allows producers to model drought scenarios against their current operations.</p>
+            <a href="#" class="link">Learn more →</a>
         </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project">
+            <h3>Small Acreage Irrigation Cost-Benefit Analysis</h3>
+            <div class="project-meta">
+                <span class="label">Members:</span> Jan Gonzales (UC Agriculture &amp; Natural Resources)<br>
+                <span class="label">Funded by:</span> USDA NIFA
+            </div>
+            <p>This project provides Extension educators with curriculum and worksheets for helping small-acreage producers in California and the Southwest evaluate the return on investment for upgrading from flood to drip irrigation systems, with particular attention to labor savings and water use efficiency.</p>
+            <a href="#" class="link">Learn more →</a>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project">
+            <h3>Farm Succession Planning Workshop Series</h3>
+            <div class="project-meta">
+                <span class="label">Members:</span> Multi-state collaboration<br>
+                <span class="label">Funded by:</span> Western Center for Risk Management Education
+            </div>
+            <p>A six-state collaborative workshop series addressing the legal, financial, and interpersonal dimensions of farm and ranch succession. The project developed standardized materials that can be adapted to each state's legal framework while maintaining consistent economic guidance.</p>
+            <a href="#" class="link">Learn more →</a>
+        </div>
+
+        <!-- ADD MORE PROJECTS following the pattern above -->
+        <!--
+        <div class="project">
+            <h3>PROJECT TITLE</h3>
+            <div class="project-meta">
+                <span class="label">Members:</span> NAMES (INSTITUTIONS)<br>
+                <span class="label">Funded by:</span> FUNDING SOURCE
+            </div>
+            <p>DESCRIPTION</p>
+            <a href="#" class="link">Learn more →</a>
+        </div>
+        -->
     </main>
 
     <footer>
